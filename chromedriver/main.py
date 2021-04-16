@@ -24,5 +24,6 @@ try:
 except Exception as ex:
     print(ex)
 finally:
+    # Закрывает окно браузера
     driver.close()
     driver.quit()
