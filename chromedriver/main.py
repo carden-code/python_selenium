@@ -10,7 +10,7 @@ try:
     sleep(5)
 
     # refrash - обновляет окно браузера.
-    # driver.refresh()
+    driver.refresh()
 
     # Делает скриншот страницы и сохраняет её.
     driver.get_screenshot_as_file('1.png')
