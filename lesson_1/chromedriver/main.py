@@ -3,7 +3,7 @@ from time import sleep
 
 
 url = 'https://instagram.com/'
-driver = webdriver.Chrome(executable_path='/home/vyacheslav/python_selenium/chromedriver/chromedriver')
+driver = webdriver.Chrome(executable_path='/lesson_1/chromedriver/chromedriver')
 
 try:
     driver.get(url=url)
