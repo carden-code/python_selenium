@@ -2,3 +2,4 @@
 .idea/
 *.pyc
 /lesson_3_proxy/proxy_auth_data.py
+/lesson_4_auth_on_sites/auth_data.py
