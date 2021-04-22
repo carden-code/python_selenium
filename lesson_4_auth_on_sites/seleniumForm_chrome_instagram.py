@@ -3,7 +3,7 @@ from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 # from fake_useragent import UserAgent
-from auth_data import vk_password, vk_name
+from auth_data import inst_name, inst_password
 
 #
 # user_agent = UserAgent()
@@ -16,26 +16,24 @@ driver = webdriver.Chrome(executable_path='/home/vyacheslav/python_selenium/less
                           options=options)
 
 try:
-    driver.get('https://vk.com')
+    driver.get('https://www.instagram.com/')
     sleep(5)
 
-    email_input = driver.find_element_by_id("index_email")
+    email_input = driver.find_element_by_name('username')
     # Очищает поле
     email_input.clear()
-    email_input.send_keys(user_name)
+    email_input.send_keys(inst_name)
     sleep(3)
 
-    password_input = driver.find_element_by_xpath('//*[@id="index_pass"]')
+    password_input = driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[2]/div/label/input')
     password_input.clear()
-    password_input.send_keys(vk_password)
+    password_input.send_keys(inst_password)
     sleep(3)
     password_input.send_keys(Keys.ENTER)
     # login_button = driver.find_element_by_id('index_login_button')
     # login_button.click()
     sleep(15)
 
-    news_link = driver.find_element_by_id('l_nwsf').click()
-    sleep(15)
 
 except Exception as ex:
     print(ex)
