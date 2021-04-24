@@ -38,6 +38,7 @@ try:
     # # # сохраняем cookies в файл
     # pickle.dump(driver.get_cookies(), open(f"{inst_name}_cookies", "wb"))
     driver.get('https://www.instagram.com/')
+    # Добавляем куки в вебрайвер из файла
     for cookie in pickle.load(open(f"{inst_name}_cookies", "rb")):
         driver.add_cookie(cookie)
 
